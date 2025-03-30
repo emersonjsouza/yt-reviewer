@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Transcript Viewer</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+</head>
+<body>
+    <h2>Enter a YouTube Video URL</h2>
+    <form hx-post="/get-transcript" hx-target="#result" hx-swap="innerHTML">
+        <input type="text" name="url" placeholder="https://www.youtube.com/watch?v=..." size="60">
+        <button type="submit">Get Transcript</button>
+    </form>
+    <div id="result">
+        <!-- Transcript will be injected here -->
+    </div>
+</body>
+</html>
